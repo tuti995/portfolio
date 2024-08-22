@@ -23,8 +23,6 @@ const getPostMetadata = (): PostMetadata[] => {
     new Date(postA.date) > new Date(postB.date) ? -1 : 1
   );
 
-  // console.log(sortedPosts);
-
   return sortedPosts;
 };
 
