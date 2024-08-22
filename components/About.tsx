@@ -70,18 +70,14 @@ export default function About() {
       <div className="mx-auto max-w-[800px]">
         <h2 className="text-3xl text-center my-8 xl:mb-16">About Me</h2>
         <p className="leading-[2] lg:leading-[3]">
-          出身は{process.env.MY_BIRTHPLACE_1}で、現在も
-          {process.env.MY_BIRTHPLACE_2}在住のハマっ子です。
+          出身は神奈川県横浜市で、現在も横浜市在住のハマっ子です。
           <br />
-          経歴は {process.env.MY_CAREER_1} → {process.env.MY_CAREER_2} →{" "}
-          {process.env.MY_CAREER_3} → {process.env.MY_CAREER_4} →{" "}
-          {process.env.MY_CAREER_5}
+          経歴は 医療系専門学校 → 医療職 → 職業訓練校 → Web制作会社 →
+          Webメディアサービス会社
           <br />
-          {process.env.MY_CAREER_4}では主に{process.env.MY_JOB_1}
-          として働いていました。
+          Web制作会社では主にコーダー兼ディレクター として働いていました。
           <br />
-          {process.env.MY_CAREER_5}では主に{process.env.MY_JOB_2}
-          を担当しています。
+          Webメディアサービス会社では主にWeb広告運用とサイトの改修などを担当しています。
           <br />
           好きなものは観葉植物と読書と猫。
           <br />
