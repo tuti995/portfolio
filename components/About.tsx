@@ -69,7 +69,7 @@ export default function About() {
     <section className="container xl:pt-24 my-16 lg:my-32">
       <div className="mx-auto max-w-[800px]">
         <h2 className="text-3xl text-center my-8 xl:mb-16">About Me</h2>
-        <p className="leading-loose">
+        <p className="leading-[2] lg:leading-[3]">
           出身は{process.env.MY_BIRTHPLACE_1}で、現在も
           {process.env.MY_BIRTHPLACE_2}在住のハマっ子です。
           <br />
@@ -80,14 +80,17 @@ export default function About() {
           {process.env.MY_CAREER_4}では主に{process.env.MY_JOB_1}
           として働いていました。
           <br />
+          {process.env.MY_CAREER_5}では主に{process.env.MY_JOB_2}
+          を担当しています。
+          <br />
           好きなものは観葉植物と読書と猫。
           <br />
           マイブームは散歩とパン屋巡りです。
         </p>
       </div>
       <div className="max-w-[800px] mx-auto">
-        <h3 className="text-xl my-12 font-bold">Usage experience</h3>
-        <div className="grid place-items-center grid-cols-5 md:grid-cols-8 lg:grid-cols-10 gap-3">
+        <h3 className="text-xl my-16 font-bold">Usage experience</h3>
+        <div className="grid place-items-center grid-cols-5 md:grid-cols-8 lg:grid-cols-10 gap-4">
           {skillData.data.map((item, index) => {
             const { imgPath } = item;
             return (
