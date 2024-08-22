@@ -12,7 +12,7 @@ import {
 
 const Introduction = () => {
   return (
-    <section className="pt-40 h-[84vh] lg:pt-50">
+    <section className="pt-40 h-[84vh] lg:pt-0 lg:flex lg:items-center">
       <div className="container mx-auto">
         <div className="flex lg:flex-row-reverse flex-col justify-between items-center gap-x-8 max-w-[720px] mx-auto">
           <div className="border border-dotted rounded-full p-2">
