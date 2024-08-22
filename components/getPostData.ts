@@ -5,13 +5,9 @@ import { notFound } from "next/navigation";
 import { revalidatePath } from "next/cache";
 
 const getPostData = (slug: string): any => {
-  const folder = "content/";
-  const file = path.join(folder, `${slug}.md`);
-  if (!fs.existsSync(file)) {
-    notFound();
-  }
-
-  const content = fs.readFileSync(file, "utf8");
+  const content = fs.readFileSync(`content/${slug}.md`, "utf8");
+  console.log(slug, "slug");
+  console.log(content, "content");
   const matterResult = matter(content);
   revalidatePath("/posts");
   return matterResult;
