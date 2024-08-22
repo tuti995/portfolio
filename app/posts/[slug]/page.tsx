@@ -1,23 +1,7 @@
 import Link from "next/link";
-import fs from "fs";
-import path from "path";
 import Markdown from "markdown-to-jsx";
-import matter from "gray-matter";
 import getPostMetadata from "@/components/getPostMetadata";
-import { revalidatePath } from "next/cache";
-import { notFound } from "next/navigation";
-
-const getPostContent = async (slug: string) => {
-  const folder = "content/";
-  const file = path.join(folder, `${slug}.md`);
-  if (!fs.existsSync(file)) {
-    notFound();
-  }
-  const content = fs.readFileSync(file, "utf8");
-  const matterResult = matter(content);
-  revalidatePath("/posts");
-  return matterResult;
-};
+import getPostData from "@/components/getPostData";
 
 export const generateStaticParams = async () => {
   const posts = getPostMetadata();
@@ -29,7 +13,7 @@ export const generateStaticParams = async () => {
 
 export default async function PostPage(props: any) {
   const slug = props.params.slug;
-  const post = await getPostContent(slug);
+  const post = await getPostData(slug);
   return (
     <div className="container max-w-[800px] mx-auto">
       <h2 className="text-xl text-center p-8">{post.data.title}</h2>
