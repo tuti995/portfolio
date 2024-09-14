@@ -7,7 +7,7 @@ import Link from "next/link";
 import Logo from "./Logo";
 import ThemeToggler from "./ThemeToggler";
 import Nav from "./Nav";
-import MonileNav from "./MonileNav";
+import MobileNav from "./MobileNav";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
@@ -44,7 +44,7 @@ export default function Header() {
             <ThemeToggler />
             {/* mobile nav */}
             <div className="lg:hidden">
-              <MonileNav />
+              <MobileNav />
             </div>
           </div>
         </div>

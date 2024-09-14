@@ -6,7 +6,7 @@ import { AlignJustify } from "lucide-react";
 import Nav from "./Nav";
 import Logo from "./Logo";
 
-export default function MonileNav() {
+export default function MobileNav() {
   return (
     <Sheet>
       <SheetTrigger asChild>
