@@ -38,7 +38,7 @@ export default function Header() {
             {/* nav */}
             <Nav
               containerStyles="hidden items-center lg:flex gap-x-8"
-              linkStyles="relative hover:text-primary transition-all"
+              linkStyles="relative"
               underlineStyles="absolute left-0 top-full h-[2px] bg-primary w-full"
             />
             <ThemeToggler />

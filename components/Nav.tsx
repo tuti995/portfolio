@@ -25,7 +25,15 @@ export default function Nav({
         {links.map((link, index) => {
           return (
             <li key={index} className={`capitalize ${linkStyles}`}>
-              <a href={link.path}>
+              <Link
+                href={link.path}
+                className={
+                  link.path === path
+                    ? "pointer-events-none opacity-50"
+                    : "hover:text-primary transition-all"
+                }
+                aria-disabled={link.path === path}
+              >
                 {link.path === path && (
                   <motion.span
                     initial={{ y: "-100%" }}
@@ -36,7 +44,7 @@ export default function Nav({
                   />
                 )}
                 {link.name}
-              </a>
+              </Link>
             </li>
           );
         })}
